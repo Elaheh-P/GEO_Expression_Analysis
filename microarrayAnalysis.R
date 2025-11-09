@@ -12,7 +12,7 @@ library(reshape2)
 library(plyr)
 
 #### Set Working Directory
-setwd('D:/bioinf/dr.sharifi/Dr sharifi/Bioinf pishrafte 1/Sharifworkshop/ ')
+setwd('D:/bioinf/Bioinfproject /aml ')
 
 #### specify dataset info
 series = 'GSE9476'    # accession number of the data 
@@ -140,4 +140,5 @@ dim(aml.down)
 aml.down.genes = unique(aml.down$Gene.symbol) # to delete the repetitive ones
 aml.down.genes = as.character(strsplit2( aml.down.genes ,'///'))
 write.table(aml.down.genes , file= 'results/AML_CD34_DOWN.txt' , quote= F , row.names = F , col.names = F)
+
 
